@@ -4,6 +4,9 @@ const loanRoutes = require('./routes/loanRoutes');
 const db = require('./models');
 
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('Hello from Bank System API!');
+});
 app.use('/api/v1', loanRoutes);
 
 // Sync DB and start server
